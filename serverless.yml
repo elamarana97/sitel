@@ -1,0 +1,25 @@
+service: users #App name
+frameworkVersion: "3"
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: test
+  region: ap-southeast-2
+  memorySize: 128
+  timeout: 15
+
+
+plugins: -serverless-offline
+functions:
+  management: #lambda function name
+    handler:  lambda.handler
+    events:
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
+
