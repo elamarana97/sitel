@@ -1,7 +1,8 @@
 # Node js user management
-Files belong to  Lambda
-# lambda.js
-# serverless.yml(for sereveless deploy)
+
+# Files belong to  Lambda
+ lambda.js
+ serverless.yml(for sereveless deploy)
 
 # To execute the app
 node index.js or npm run test 
